@@ -1,0 +1,164 @@
+/***  FONTS ***/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+
+/***  VARIABLES & THEMES ***/
+
+:root {
+  --primary-color: #cf0f0f;
+  --primary-color-contrast: #ffffff;
+  --field-background-color: #000;
+  font-size: 62.5%;
+}
+
+.light-theme {
+  --page-background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 65%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+  --header-background-color: #e3e3e3;
+  --highlight-color: #000000;
+  --featured-font-family: 'Archivo Black', sans-serif;
+  --character-top-image-src: url("./assets/images/characters/kids-on-the-bike.svg");
+  --character-top-image-color: #ffffff;
+  --character-bottom-image-src: url("./assets/images/characters/inverted-world-monster.svg");
+  --character-bottom-image-color: #e5e5e5;
+  --background-lamp-image: url("./assets/images/backgrounds/lamps.png");
+  --footer-background-color: #b5bbbf;
+}
+
+.dark-theme {
+  --page-background: linear-gradient(
+    180deg,
+    #050000 0%,
+    #130404 65%,
+    rgba(19, 1, 1, 0.75) 100%
+  );
+  --header-background-color: #220f0f;
+  --highlight-color: #ffffff;
+  --featured-font-family: "Rubik Glitch", sans-serif;
+  --character-bottom-image-src: url("./assets/images/characters/kids-on-the-bike.svg");
+  --character-bottom-image-color: rgba(255, 255, 255, 0.1);
+  --character-top-image-src: url("./assets/images/characters/inverted-world-monster.svg");
+  --character-top-image-color: #000;
+  --background-lamp-image: url("./assets/images/backgrounds/lamps-inverted.png");
+  --footer-background-color: #000;
+}
+
+.dark-theme button,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+.dark-theme .invert-element {
+  transform: rotateZ(180deg) scaleX(-1);
+}
+
+/* GENERYC STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+h2,
+h3 {
+  font-family: var(--featured-font-family);
+  font-size: 4.8rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--highlight-color);
+}
+
+p,
+input,
+textarea,
+label {
+  font-family: "Libre Baskerville", serif;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 1s;
+}
+
+/* =========== HEADER ================= */
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 850px;
+  align-items: center;
+  text-align: center;
+  background-color: var(--header-background-color);
+  position: relative;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(./assets/images/banner/florest.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 90%;
+  filter: saturate(0);
+  opacity: .2;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 6.7rem;
+  z-index: 1;
+}
+
+header .container p {
+  width: 75rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.9rem;
+}
+
+header .container button {
+  color: var(--primary-color);
+  background-color: transparent;
+  font-family: var(--featured-font-family);
+  padding: 16px 32px;
+  font-size: 2rem;
+  border: 3px solid var(--primary-color);
+}
+
+header .container button:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-color-contrast);
+}
+
+/* img inverted world */
+.img-invert-world {
+  width: 100%;
+  max-width: 900px;
+  position: absolute;
+}
+
+.img-invert-world#top-img {
+  background-color: var(--character-top-image-color);
+  height: 100%;
+  bottom: -3px;
+
+  mask: var(--character-top-image-src) bottom / 100% no-repeat;
+  -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+}
