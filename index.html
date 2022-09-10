@@ -7,24 +7,23 @@
     <title>Mundo Invertido</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="light-theme">
+<body class="dark-theme">
     <header>
         <audio id="music">
             <source src="./assets/musics/normal-world.mpeg">
         </audio>
         <div class="container">
-            <img src="./assets/images/banner/logo.svg" alt="Logo Mundo Invertido">
-            <p>Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a recompensa é grande: salvar Hawkings e o mundo todo das garras de Vecna. Você está preparado? Então clique no botão abaixo para entrar no Mundo Invertido! </p>
+            <img class="invert-element" src="./assets/images/banner/logo.svg" alt="Logo Mundo Invertido">
+            <p class="invert-element">Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a recompensa é grande: salvar Hawkings e o mundo todo das garras de Vecna. Você está preparado? Então clique no botão abaixo para entrar no Mundo Invertido! </p>
             <button id="switch-theme-button" onclick="switchTheme()">Inverter Mundos</button>
         </div>
         <div id="top-img" class="img-invert-world"></div>
     </header>
     
-    <div class="container-img-invert-world">
-        <div id="bottom-img" class="img-invert-world"></div>
-    </div>
-
+    
+    
     <main>
+        <div id="bottom-img" class="img-invert-world"></div>
 
         <section id="inverted-world" class="container">
             <div class="content">
@@ -51,17 +50,14 @@
         <section id="gallery-img" class="container">
             <h2>a segunda série mais assistida da netflix</h2>
             <ul class="gallery-container">
-                <li class="image-content">
+                <li class="image-content invert-element">
                     <img src="./assets/images/content/serie-image-01.png" alt="">
                 </li>
-                <li class="image-content">
+                <li class="image-content invert-element">
                     <img src="./assets/images/content/serie-image-02.png" alt="">
                 </li>
-                <li class="image-content">
+                <li class="image-content invert-element">
                     <img src="./assets/images/content/serie-image-03.png" alt="">
-                </li>
-                <li class="background-image">
-                    <img src="./assets/images/backgrounds/lamps.png" alt="">
                 </li>
             </ul>
         </section>
@@ -91,11 +87,13 @@
                 </form>
             </div>
         </section>
-
-        <footer class="container">
-            <p>Projeto construído para fins didáticos, com o objetivo de colocar em prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO.</p>
-            <img src="./assets/images/footer/logo.svg" alt="Logo da DIO">
-        </footer>
     </main>
+
+    <footer class="container">
+        <p>Projeto construído para fins didáticos, com o objetivo de colocar em prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO.</p>
+        <div class="logo">
+            <img src="./assets/images/footer/logo.svg" alt="Logo da DIO">
+        </div>
+    </footer>
 </body>
 </html>

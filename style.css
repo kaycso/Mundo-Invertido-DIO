@@ -213,6 +213,8 @@ main::before {
 
 section.container {
   justify-content: space-between;
+  position: relative;
+  bottom: 200px;
 }
 /* ===== 1° SECTION (INVERTED WORLD) =========== */
 
@@ -255,15 +257,15 @@ section.container {
   flex-direction: column;
   gap: 4rem;
   justify-content: center;
+  background: var(--background-lamp-image) 127% / 50% no-repeat;
+  width: 100%;
+  padding-left: 120px;
 }
 
 #gallery-img .gallery-container {
   display: flex;
   width: 100%;
   padding-left: 20px;
-  /* justify-content: space-between; */
-  /* padding-inline: 20px; */
-  /* padding-block: 20px; */
   gap: 5rem;
   position: relative;
 }
@@ -369,10 +371,51 @@ section.container {
   border: 2px solid var(--primary-color-contrast);
   background: var(--field-background-color);
   color: var(--primary-color-contrast);
+  padding: 8px;
 }
 
 #form .content.form form input:focus-visible,
 #form .content.form form textarea:focus-visible {
   outline: none;
   border-color: black;
+}
+
+/* ===== FOOTER ============ */
+
+
+footer.container {
+  flex-direction: column;
+  padding: 6rem 0;
+  margin: 0;
+  background: var(--footer-background-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  gap: 2.4rem;
+}
+
+footer p {
+  max-width: 700px;
+  width: 100%;
+}
+
+footer::after,
+footer::before {
+  content: "";
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  background: url(./assets/images/footer/tape.svg) no-repeat;
+  background-size: contain;
+  bottom: -30px;
+}
+
+footer::after {
+  right: -50px;
+  transform: rotateZ(10deg);
+}
+
+footer::before {
+  left: -50px;
+  transform: rotateZ(-10deg);
 }
