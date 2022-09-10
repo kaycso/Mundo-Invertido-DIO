@@ -352,13 +352,13 @@ section.container {
 
 #form .content.form form button {
   align-self: center;
-  background: var(--highlight-color);
+  background-color: var(--field-background-color);
   color: var(--primary-color-contrast);
   font-size: 1.6rem;
 }
 
 #form .content.form form button:hover {
-  background: var(--primary-color-contrast);
+  background-color: var(--primary-color-contrast);
   color: var(--field-background-color);
 }
 
