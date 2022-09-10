@@ -10,5 +10,6 @@ Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo Inve
 - CSS
 - JavaScript
 
-## 🔗 Links Figma
+## 🔗 Links
 [Figma](https://www.figma.com/file/I3Q42CcVUziRN3iMfTrbfb/Stranger-Things?node-id=0%3A1) 
+[Repositório Original DIO](https://github.com/digitalinnovationone/semana-frontend-mundo-invertido/tree/main)
